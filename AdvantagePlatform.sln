@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2026
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdvantagePlatform", "src\AdvantagePlatform.csproj", "{763B9453-277A-4606-AED6-7155432157A7}"
 EndProject
@@ -10,9 +10,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LtiAdvantage.IdentityServer4", "..\..\LTI\LtiAdvantage\src\LtiAdvantage.IdentityServer4\LtiAdvantage.IdentityServer4.csproj", "{1CB80393-12A0-42D9-B9EC-D6AF22C00F4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LtiAdvantage", "..\LtiAdvantage\src\LtiAdvantage\LtiAdvantage.csproj", "{9BB9604B-59A9-4F12-B02B-0151338B4666}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LtiAdvantage", "..\..\LTI\LtiAdvantage\src\LtiAdvantage\LtiAdvantage.csproj", "{9CF5D26C-B002-48F8-BC08-77DBE61B3FF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LtiAdvantage.IdentityServer4", "..\LtiAdvantage\src\LtiAdvantage.IdentityServer4\LtiAdvantage.IdentityServer4.csproj", "{980A5715-9F73-4C4C-9EDD-558CC53414E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,14 +24,14 @@ Global
 		{763B9453-277A-4606-AED6-7155432157A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{763B9453-277A-4606-AED6-7155432157A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{763B9453-277A-4606-AED6-7155432157A7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1CB80393-12A0-42D9-B9EC-D6AF22C00F4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1CB80393-12A0-42D9-B9EC-D6AF22C00F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1CB80393-12A0-42D9-B9EC-D6AF22C00F4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1CB80393-12A0-42D9-B9EC-D6AF22C00F4D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9CF5D26C-B002-48F8-BC08-77DBE61B3FF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9CF5D26C-B002-48F8-BC08-77DBE61B3FF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9CF5D26C-B002-48F8-BC08-77DBE61B3FF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9CF5D26C-B002-48F8-BC08-77DBE61B3FF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BB9604B-59A9-4F12-B02B-0151338B4666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BB9604B-59A9-4F12-B02B-0151338B4666}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BB9604B-59A9-4F12-B02B-0151338B4666}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BB9604B-59A9-4F12-B02B-0151338B4666}.Release|Any CPU.Build.0 = Release|Any CPU
+		{980A5715-9F73-4C4C-9EDD-558CC53414E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{980A5715-9F73-4C4C-9EDD-558CC53414E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{980A5715-9F73-4C4C-9EDD-558CC53414E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{980A5715-9F73-4C4C-9EDD-558CC53414E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
