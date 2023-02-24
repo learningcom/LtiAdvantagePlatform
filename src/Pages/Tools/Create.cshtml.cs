@@ -79,7 +79,7 @@ namespace AdvantagePlatform.Pages.Tools
                         Value = Tool.PublicKey
                     }
                 },
-                RedirectUris = { Tool.LaunchUrl },
+                RedirectUris = { !string.IsNullOrEmpty(Tool.RedirectUrl) ? Tool.RedirectUrl : Tool.LaunchUrl },
                 RequireConsent = false
             };
 

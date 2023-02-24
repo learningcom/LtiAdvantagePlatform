@@ -51,6 +51,7 @@ namespace AdvantagePlatform.Pages.Tools
 
             var client = await _identityContext.Clients
                 .Include(c => c.ClientSecrets)
+                .Include(c => c.RedirectUris)
                 .SingleOrDefaultAsync(c => c.Id == tool.IdentityServerClientId);
             if (client == null)
             {
@@ -97,7 +98,7 @@ namespace AdvantagePlatform.Pages.Tools
             client.ClientId = Tool.ClientId;
             client.RedirectUris = new List<ClientRedirectUri>
             {
-                new ClientRedirectUri { RedirectUri = Tool.LaunchUrl }
+                new ClientRedirectUri { RedirectUri = !string.IsNullOrEmpty(Tool.RedirectUrl) ? Tool.RedirectUrl : Tool.LaunchUrl }
             };
 
             var publicKey = client.ClientSecrets

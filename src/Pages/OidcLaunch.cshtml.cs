@@ -84,7 +84,9 @@ namespace AdvantagePlatform.Pages
                 target_link_uri = tool.LaunchUrl,
 
                 // The identifier of the LtiResourceLink message (or the deep link message, etc)
-                lti_message_hint = JsonConvert.SerializeObject(new {id, messageType, courseId })
+                lti_message_hint = JsonConvert.SerializeObject(new { id, messageType, courseId }),
+
+                client_id = client.ClientId
             };
 
             var url = new RequestUrl(tool.LoginUrl).Create(values);

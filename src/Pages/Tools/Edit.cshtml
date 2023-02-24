@@ -36,6 +36,12 @@
                             <span asp-validation-for="Tool.LaunchUrl" class="text-danger"></span>
                         </div>
                         <div class="form-group">
+                            <label asp-for="Tool.RedirectUrl"></label>
+                            <tooltip asp-for="Tool.RedirectUrl"></tooltip>
+                            <input asp-for="Tool.RedirectUrl" class="form-control" />
+                            <span asp-validation-for="Tool.RedirectUrl" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
                             <label asp-for="Tool.DeepLinkingLaunchUrl"></label>
                             <tooltip asp-for="Tool.DeepLinkingLaunchUrl"></tooltip>
                             <input asp-for="Tool.DeepLinkingLaunchUrl" class="form-control" />

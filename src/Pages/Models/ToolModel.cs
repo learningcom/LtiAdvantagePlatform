@@ -63,6 +63,7 @@ namespace AdvantagePlatform.Pages.Models
             PublicKey = client.ClientSecrets
                 ?.FirstOrDefault(s => s.Type == Constants.SecretTypes.PublicPemKey)
                 ?.Value;
+            RedirectUrl = client.RedirectUris?.FirstOrDefault()?.RedirectUri;
         }
 
         /// <summary>
@@ -164,6 +165,9 @@ namespace AdvantagePlatform.Pages.Models
         /// </summary>
         [Display(Name = "Access Token URL")]
         public string TokenUrl { get; set; }
+
+        [Display(Name = "Redirect URL")]
+        public string RedirectUrl { get; set; }
 
         #endregion
     }
