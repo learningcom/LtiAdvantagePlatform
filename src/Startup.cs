@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using AdvantagePlatform.Data;
 using AdvantagePlatform.Utility;
+using IdentityServer4.AccessTokenValidation;
 using IdentityServer4.EntityFramework.DbContexts;
 using IdentityServer4.EntityFramework.Mappers;
 using Microsoft.AspNetCore.Builder;
@@ -152,16 +153,25 @@ namespace AdvantagePlatform
             services.AddAuthentication(IdentityConstants.ApplicationScheme)
 
                 // Add Bearer authentication to authenticate API calls
-                .AddIdentityServerAuthentication(options =>
-                {
-                    // The JwtBearer authentication handler will use the discovery endpoint
-                    // of the authorization server to find the JWKS endpoint, to find the
-                    // key to validate the JwtBearer token. Don't forget to define the
-                    // base address of your Identity Server here. If you don't, you'll get
-                    // "Unauthorized" errors when you call an API that is protected by a
-                    // JwtBearer token.
-                    options.Authority = Configuration["Authority"];
-                });
+                .AddIdentityServerAuthentication(
+                    IdentityServerAuthenticationDefaults.AuthenticationScheme,
+                    options =>
+                    {
+                        // The JwtBearer authentication handler will use the discovery endpoint
+                        // of the authorization server to find the JWKS endpoint, to find the
+                        // key to validate the JwtBearer token. Don't forget to define the
+                        // base address of your Identity Server here. If you don't, you'll get
+                        // "Unauthorized" errors when you call an API that is protected by a
+                        // JwtBearer token.
+                        options.Authority = Configuration["Authority"];
+                        options.TokenValidationParameters.ValidateAudience = false;
+                        options.TokenValidationParameters.ValidIssuers = new[]
+                        {
+                                "https://localhost:9001",
+                                "https://host.docker.internal:9001"
+                            };
+                    },
+                    null);
 
             // Add LTI Advantage service authorization policies that enforce API scopes
             services.AddLtiAdvantagePolicies();
